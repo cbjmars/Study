@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>API TEST (Json)</title>
+    <!-- autocomplete from jQuery Ui -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/functions.js" asp-append-version="true"></script>
+    <script type="text/javascript">
+        getItems();
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var toDay = new Date();
+            document.getElementById("hddGreateDt_a").value = toDay.yyyymmdd();
+            document.getElementById("hddGreateDt_m").value = toDay.yyyymmdd();
+        });
+        Date.prototype.yyyymmdd = function () {
+            var yyyy = this.getFullYear().toString();
+            var mm = (this.getMonth() + 1).toString();
+            var dd = this.getDate().toString();
+
+            var getdate = yyyy + "-" + (mm[1] ? mm : "0" + mm[0]) + "-" + (dd[1] ? dd : "0" + dd[0]);
+            return getdate
+        }
+    </script>
+    <style>
+        table {
+            border: 1px solid #444444;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #444444;
+        }
+    </style>
+</head>
+<body>
+    <h1>To-do CRUD</h1>
+    <div id="inputForm">
+        <h3>Add</h3>
+        <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
+            <input type="text" id="txtSubject_a" /><br />
+            <input type="text" id="txtContent_a" style="width:400px;" /><br />
+            <input type="hidden" id="hddGreateDt_a" />
+            <input type="submit" value="추가" />
+        </form>
+    </div>
+    <div id="editForm" style="display:none;">
+        <h3>Modify</h3>
+        <form action="javascript:void(0);" onsubmit="updateItem()">
+            <input type="text" id="txtSubject_m" /><br />
+            <input type="text" id="txtContent_m" style="width:400px;" /><br />
+            <input type="hidden" id="hddGreateDt_m" />
+            <input type="submit" value="저장" />
+        </form>
+    </div>
+    <br /><br />
+    <p id="counter"></p>
+    <table>
+        <tr>
+            <th>제목</th>
+            <th>내용</th>
+            <th>날짜</th>
+            <th>&nbsp;</th>
+            <th>&nbsp;</th>
+        </tr>
+        <tbody id="items">
+            <tr>
+                <td colspan="5">내용없음</td>
+            </tr>
+        </tbody>
+    </table>
+    <input type="hidden" id="hddSeq" />
+</body>
+</html>
+
