@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Test\\TestSource\\Core30.WebApi.Sample\\Core30.WebApi.Sample.csproj": {}
+    "E:\\99.Source\\Study\\Core30.WebApi.Sample\\Core30.WebApi.Sample.csproj": {}
   },
   "projects": {
-    "E:\\Test\\TestSource\\Core30.WebApi.Sample\\Core30.WebApi.Sample.csproj": {
+    "E:\\99.Source\\Study\\Core30.WebApi.Sample\\Core30.WebApi.Sample.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Test\\TestSource\\Core30.WebApi.Sample\\Core30.WebApi.Sample.csproj",
+        "projectUniqueName": "E:\\99.Source\\Study\\Core30.WebApi.Sample\\Core30.WebApi.Sample.csproj",
         "projectName": "Core30.WebApi.Sample",
-        "projectPath": "E:\\Test\\TestSource\\Core30.WebApi.Sample\\Core30.WebApi.Sample.csproj",
+        "projectPath": "E:\\99.Source\\Study\\Core30.WebApi.Sample\\Core30.WebApi.Sample.csproj",
         "packagesPath": "C:\\Users\\es-whlee\\.nuget\\packages\\",
-        "outputPath": "E:\\Test\\TestSource\\Core30.WebApi.Sample\\obj\\",
+        "outputPath": "E:\\99.Source\\Study\\Core30.WebApi.Sample\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -60,6 +60,16 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.0.1, 3.0.1]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.0.3, 3.0.3]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -68,7 +78,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
         }
       }
     }
